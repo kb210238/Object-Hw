@@ -109,3 +109,12 @@ let bondTitles = () => {
 
 console.log(bondTitles());
 
+let oddBonds = () => {
+	for (i = 0; i < bondFilms.length; i++) {
+		if (bondFilms[i].year % 2 !== 0) {
+			console.log(bondFilms[i].title + ", " + bondFilms[i].year);
+		}
+	}
+}
+
+console.log(oddBonds());
