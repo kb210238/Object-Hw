@@ -118,3 +118,14 @@ let oddBonds = () => {
 }
 
 console.log(oddBonds());
+
+const toCommas = (num) => {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+let totalGross = 0;
+for (var i = 0; i < bondFilms.length; i++) {
+  totalGross += Number(bondFilms[i].gross.replace("$","").replace(",","").replace(",","").replace(",",""));
+}
+
+console.log("All together, the bond films grossed $" + changeCommas(totalGross));
